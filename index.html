@@ -6,13 +6,18 @@
         
 
         <script>
-            function soma(numero1, numero2) {
-                var resultado = numero1 + numero2
-
-                return resultado
+            function retornaSexo(sexo) {
+                switch (sexo) {
+                    case 'M':
+                        return 'Masculino'
+                    case 'F':
+                        return 'Feminino'
+                    default:
+                        return 'Outro'
+                }
             }
 
-            var resultado = soma(1, 2)
+            var resultado = retornaSexo('M')
             console.log(resultado)
         </script>
     </body>

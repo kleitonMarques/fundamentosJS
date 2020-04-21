@@ -19,9 +19,18 @@
                 respostaUsuario =  "O usuário mora em " + endereco.cidade + " / " + endereco.uf + ", no bairro " + endereco.bairro + ", na rua " + endereco.rua + "com nº " + endereco.numero
                 return respostaUsuario
             }
-            
             console.log(exercicioUm())
 
+            function exercicioDois(x, y) {
+                x = x % 2
+                y = y % 2
+                var resultaX = x == 0 ? 'Par' : 'Impar'
+                var resultaY = y == 0 ? 'Par' : 'Impar'
+                console.log(resultaX)
+                console.log(resultaY)
+            }
+            exercicioDois(32, 321)
+            
         </script>
     </body>
 </html>

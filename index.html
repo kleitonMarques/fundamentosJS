@@ -41,7 +41,7 @@
             var skills = ["Javascript", "ReactJS", "React Native"];
             console.log(exercicioTres(skills))
 
-            function experiencia(anos) {
+            function exercicioQuatro(anos) {
                 if(anosEstudo == 0) {
                     return 'Iniciante'
                 } else if (anosEstudo >= 1 && anosEstudo <= 3) {
@@ -53,10 +53,25 @@
                 }
             }
             var anosEstudo = 7;
-            console.log(experiencia(anosEstudo))
+            console.log(exercicioQuatro(anosEstudo))
 
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
 
-
+            function exercicioCinco() {
+                for(i=0; i < usuarios.length; i++) {
+                    console.log("O " + usuarios[i].nome + " possui as habilidades: " + usuarios[i].habilidades.join(", "))
+                }
+            }
+            exercicioCinco()
         </script>
     </body>
 </html>

@@ -6,16 +6,22 @@
         
 
         <script>
-
-            function exibeAlgo() {
-                console.log('Hello Word')
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
             }
-            // setInterval(exibeAlgo, 1000)
-
-            function exibeOutro() {
-                console.log('Hello Word 2')
+            
+            var respostaUsuario;
+            function exercicioUm() {
+                respostaUsuario =  "O usuário mora em " + endereco.cidade + " / " + endereco.uf + ", no bairro " + endereco.bairro + ", na rua " + endereco.rua + "com nº " + endereco.numero
+                return respostaUsuario
             }
-            setTimeout(exibeOutro, 1000)
+            
+            console.log(exercicioUm())
+
         </script>
     </body>
 </html>

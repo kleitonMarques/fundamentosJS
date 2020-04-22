@@ -23,13 +23,30 @@
         </style>
         <script>
             var criaElemento = document.querySelector('.criaElemento')
-
             criaElemento.onclick = function () {
                 var recebeElement = document.querySelector('#app')
                 var boxElement = document.createElement('div')
                 boxElement.setAttribute('class', 'boxElement')
+                boxElement.setAttribute('onmouseover', 'modaCor()')
                 recebeElement.appendChild(boxElement)
             }
+
+            var color
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                color = "#";
+                for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            function modaCor() {
+                getRandomColor()
+                document.querySelector(".boxElement").style.backgroundColor = color
+            }
+
+
         </script>
     </body>
 </html>

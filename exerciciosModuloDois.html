@@ -12,6 +12,9 @@
             <ul id="lista"></ul>
         </div>
 
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+
         <style>
             .boxElement {
                 width: 100px;
@@ -46,10 +49,21 @@
 
             var nomes = ["Diego", "Gabriel", "Lucas"];
             var lista = document.querySelector('#lista')
-            for(i=0; i < nomes.length; i++) {
-                criaNome = document.createElement('li')
-                criaNome.innerHTML = nomes[i]
-                lista.appendChild(criaNome)
+            function atualizaLista() {
+                for(i=0; i < nomes.length; i++) {
+                    criaNome = document.createElement('li')
+                    criaNome.innerHTML = nomes[i]
+                    lista.appendChild(criaNome)
+                }
+            }
+            atualizaLista()
+
+            function adicionar() {
+                var adicionaNome = document.querySelector('input[name=nome]').value
+                nomes.push(adicionaNome)
+                lista.innerHTML = ''
+                atualizaLista()
+                console.log(adicionaNome)
             }
 
         </script>

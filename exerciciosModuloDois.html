@@ -9,10 +9,8 @@
                 Criar Elemento
             </button>
 
-
+            <ul id="lista"></ul>
         </div>
-
-
 
         <style>
             .boxElement {
@@ -46,6 +44,13 @@
                 document.querySelector(".boxElement").style.backgroundColor = color
             }
 
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var lista = document.querySelector('#lista')
+            for(i=0; i < nomes.length; i++) {
+                criaNome = document.createElement('li')
+                criaNome.innerHTML = nomes[i]
+                lista.appendChild(criaNome)
+            }
 
         </script>
     </body>

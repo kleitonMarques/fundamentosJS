@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Curso de Javascript</title>
+    </head>
+    <body>
+        
+
+        <script>
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+            }
+            
+            var respostaUsuario;
+            function exercicioUm() {
+                respostaUsuario =  "O usuário mora em " + endereco.cidade + " / " + endereco.uf + ", no bairro " + endereco.bairro + ", na rua " + endereco.rua + "com nº " + endereco.numero
+                return respostaUsuario
+            }
+            console.log(exercicioUm())
+
+            function exercicioDois(x, y) {
+                x = x % 2
+                y = y % 2
+                var resultaX = x == 0 ? 'Par' : 'Impar'
+                var resultaY = y == 0 ? 'Par' : 'Impar'
+                console.log(resultaX)
+                console.log(resultaY)
+            }
+            exercicioDois(32, 321)
+            
+            function exercicioTres(skills) {
+                if(skills.indexOf("Javascript") > -1) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            var skills = ["Javascript", "ReactJS", "React Native"];
+            console.log(exercicioTres(skills))
+
+            function exercicioQuatro(anos) {
+                if(anosEstudo == 0) {
+                    return 'Iniciante'
+                } else if (anosEstudo >= 1 && anosEstudo <= 3) {
+                    return 'Intermediário'
+                } else if (anosEstudo > 3 && anosEstudo <= 6) {
+                    return 'Avançado'
+                } else if (anosEstudo > 6) {
+                    return 'Jedi Master'
+                }
+            }
+            var anosEstudo = 7;
+            console.log(exercicioQuatro(anosEstudo))
+
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+            function exercicioCinco() {
+                for(i=0; i < usuarios.length; i++) {
+                    console.log("O " + usuarios[i].nome + " possui as habilidades: " + usuarios[i].habilidades.join(", "))
+                }
+            }
+            exercicioCinco()
+        </script>
+    </body>
+</html>
